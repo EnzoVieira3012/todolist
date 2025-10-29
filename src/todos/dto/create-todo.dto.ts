@@ -3,14 +3,14 @@ import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 
 export class CreateTodoDto {
   @ApiProperty({
-    description: 'Título da tarefa',
+    description: 'Título',
     example: 'Estudar NestJS',
   })
   @IsString()
   title: string;
 
   @ApiPropertyOptional({
-    description: 'Descrição detalhada da tarefa',
+    description: 'Descrição',
     example: 'Estudar módulos, controllers e services do NestJS',
   })
   @IsString()
@@ -18,7 +18,7 @@ export class CreateTodoDto {
   description?: string;
 
   @ApiPropertyOptional({
-    description: 'Status de conclusão da tarefa',
+    description: 'Status',
     example: false,
     default: false,
   })
